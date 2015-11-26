@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains tec_formatters.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tec_formatters_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tec_formatters module.
+    case 'help.page.tec_formatters':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Some description') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tec_formatters_theme() {
+  $theme = [];
+
+  return $theme;
+}

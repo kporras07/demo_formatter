@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\tec_formatters\Plugin\Field\FieldFormatter\TecFieldFormatter.
+ * Contains \Drupal\demo_formatter\Plugin\Field\FieldFormatter\DemoFieldFormatter.
  */
 
-namespace Drupal\tec_formatters\Plugin\Field\FieldFormatter;
+namespace Drupal\demo_formatter\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemInterface;
@@ -16,17 +16,17 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
- * Plugin implementation of the 'tec_field_formatter' formatter.
+ * Plugin implementation of the 'demo_field_formatter' formatter.
  *
  * @FieldFormatter(
- *   id = "tec_field_formatter",
- *   label = @Translation("Tec field formatter"),
+ *   id = "demo_field_formatter",
+ *   label = @Translation("Demo field formatter"),
  *   field_types = {
  *     "email"
  *   }
  * )
  */
-class TecFieldFormatter extends FormatterBase {
+class DemoFieldFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
@@ -61,7 +61,7 @@ class TecFieldFormatter extends FormatterBase {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
 
-    \Drupal::logger('tec_formatters')->notice('HOOLA');
+    \Drupal::logger('demo_formatter')->notice('HOOLA');
     foreach ($items as $delta => $item) {
       $url = Url::fromUri('mailto:' . $this->viewValue($item), array(
         'absolute' => TRUE,

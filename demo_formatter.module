@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains tec_formatters.module..
+ * Contains demo_formatter.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,10 +10,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function tec_formatters_help($route_name, RouteMatchInterface $route_match) {
+function demo_formatter_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the tec_formatters module.
-    case 'help.page.tec_formatters':
+    // Main module help for the demo_formatter module.
+    case 'help.page.demo_formatter':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Some description') . '</p>';
@@ -26,7 +26,7 @@ function tec_formatters_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function tec_formatters_theme() {
+function demo_formatter_theme() {
   $theme = [];
 
   return $theme;

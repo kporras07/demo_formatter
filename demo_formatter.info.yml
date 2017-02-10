@@ -1,5 +1,5 @@
-name: Tec Formatters
+name: Demo Formatter
 type: module
 description: Some description
 core: 8.x
-package: TEC
+package: Demo
